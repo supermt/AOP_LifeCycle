@@ -52,7 +52,7 @@ public class Recorder
 				return result;
 			}else{
 				result = pjp.proceed();
-				logger.info("Action : " + targetMethod.getAnnotation(LifeCycle.class).value());
+				logger.info("Action : " + targetMethod.getAnnotation(LifeCycle.class).action());
 				logger.info("done by : "+pjp.getThis().getClass().getTypeName());//获取拦截对象
 				logger.info("request using args:"+Arrays.toString(pjp.getArgs()));
 				logger.info("Happend In Instance: ("+hostName+":"+serverPort+")");
